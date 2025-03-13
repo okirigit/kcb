@@ -1,0 +1,6 @@
+# spring boot management server instance properties
+spring:
+  application:
+    name: kcb-host2host-notify-atomic
+  profiles:
+    active: dev
