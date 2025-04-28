@@ -3,7 +3,7 @@ Used Rest TEmplate for API calls to sms server and B2C engines
 Implemented Oauth2 Authentication
 Implemented H2 in memory persistence
 
-I have included the jar file as part of the deliverable
+
 
 How to Run:
 
