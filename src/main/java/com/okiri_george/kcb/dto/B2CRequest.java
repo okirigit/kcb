@@ -1,7 +1,10 @@
 package com.okiri_george.kcb.dto;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Null;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 
@@ -10,7 +13,11 @@ import lombok.Data;
 import java.math.BigDecimal;
 
 @Data
+@Entity
 public class B2CRequest {
+    @Id
+    @Null
+    private Long id;
 
     @NotBlank(message = "Phone number is required")
     @Pattern(regexp = "^(254|0)?(7(?:(?:[0-2]|[9][0-9]))[0-9]{7})$", message = "Invalid Kenyan phone number format")
@@ -22,6 +29,8 @@ public class B2CRequest {
     @NotBlank(message = "Reference is required")
     @Pattern(regexp = "^[a-zA-Z0-9]{1,20}$", message = "Reference must be alphanumeric and between 1 and 20 characters")
     private String narration;
+
+        private String transactionId;
 
 
 }
